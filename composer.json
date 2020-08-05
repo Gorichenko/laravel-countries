@@ -1,0 +1,42 @@
+{
+  "name": "nix-enterprise/laravel-countries",
+  "version": "0.0.1",
+  "description": "Laravel countries list",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Evgeniy Gorichenko",
+      "email": "evgeniy.gorichenko@nixsolutions.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "laravel/framework": ">=5.8",
+    "pragmarx/countries": ">=0.6.2"
+  },
+  "require-dev": {
+    "codeception/codeception": "^4.1",
+    "codeception/mockery-module": "^0.4.0",
+    "codeception/module-laravel5": "^1.1",
+    "codeception/phpunit-wrapper": "^8.0",
+    "squizlabs/php_codesniffer": "^3.4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "NixEnterprise\\Countries\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "NixEnterprise\\Countries\\ServiceProvider"
+      ],
+      "aliases": {
+        "XCountries": "NixEnterprise\\Countries\\Facade"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
